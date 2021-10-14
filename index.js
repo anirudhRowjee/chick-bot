@@ -122,7 +122,7 @@ async function get_leaderboard_JSON(client)
       .db("Hacktoberfest2020", { returnNonCachedInstance: true })
       .collection("BountyData2").find().toArray();
     final_array_json = await JSON.stringify(final_json)
-    console.log(final_json);
+    // console.log(final_json);
     return final_json;
   }
   finally
@@ -215,7 +215,7 @@ module.exports = (app, { getRouter }) => {
     // get the slim context object
     var slim_context = parse_slim_object(context);
 
-    console.log(context)
+    // console.log(context)
 
     // parse the comment to ensure it's a bounty assignment comment
     if (validate_bounty_comment(slim_context.body, slim_context.sender, maintainers))
