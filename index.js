@@ -13,7 +13,7 @@ const maintainers = [
   "aarav-babu",
   "suhaskv1",
   "Skanda-hue",
-  // "Mohamed-Ayaan358",
+  "Mohamed-Ayaan358",
   "shriyays ",
   "aditi-singh2",
   "Manab784",
