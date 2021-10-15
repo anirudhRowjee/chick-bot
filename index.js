@@ -23,7 +23,7 @@ const maintainers = [
   "squirrellovespie",
   "aditikiran",
   "AyushmaanKaushik",
-  "Noel-saju",
+  "Noel-Saju",
   "rimzimsanghvi",
   "neerajsudheer",
   "karunakc",
