@@ -1,6 +1,6 @@
 const PromClient = require("prom-client");
 const MongoClient = require("mongodb").MongoClient;
-
+var cors = require('cors')
 /**
  * This is the main entrypoint to your Probot app
  * @param {import('probot').Probot} app
@@ -141,6 +141,7 @@ module.exports = (app, { getRouter }) => {
   // Your code here
   app.log.info("Yay, the app was loaded!");
   const router = getRouter('/leaderboard');
+    router.use(cors())
 
   // add leaderboard
   router.get("/", async (req, res) => {
