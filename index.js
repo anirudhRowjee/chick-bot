@@ -87,10 +87,8 @@ function parse_slim_object(context)
 
 async function assign_bounty(client, {contributor, sender, bounty, timestamp, repository, issue_number, html_url})
 {
-  try
-  {
     await client.connect();
-    const collection = client
+    const collection = await client
       .db("Hacktoberfest2020", { returnNonCachedInstance: true })
       .collection("BountyData2");
     r = await collection.updateOne(
@@ -106,12 +104,9 @@ async function assign_bounty(client, {contributor, sender, bounty, timestamp, re
       },
       { upsert: true }
     );
-  }
-  finally
-  {
     await client.close();
-  }
 }
+
 
 async function get_leaderboard_JSON(client)
 {
