@@ -14,7 +14,7 @@ const maintainers = [
   "suhaskv1",
   "Skanda-hue",
   "Mohamed-Ayaan358",
-  "shriyays ",
+  "shriyays",
   "aditi-singh2",
   "Manab784",
   "thecoderash",
@@ -199,10 +199,10 @@ module.exports = (app, { getRouter }) => {
   // make the bounty issue
   app.on("issue_comment", async (context) => {
 
-    console.log("The Issue was commented on!");
 
     // get the slim context object
     var slim_context = parse_slim_object(context);
+    console.log("The Issue was commented on!");
 
     // console.log(context)
 
