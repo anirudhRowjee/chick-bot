@@ -104,14 +104,11 @@ async function assign_bounty(client, {contributor, sender, bounty, timestamp, re
       },
       { upsert: true }
     );
-    await client.close();
 }
 
 
 async function get_leaderboard_JSON(client)
 {
-  try
-  {
     await client.connect();
     const final_json = await client
       .db("Hacktoberfest2020", { returnNonCachedInstance: true })
@@ -119,11 +116,6 @@ async function get_leaderboard_JSON(client)
     final_array_json = await JSON.stringify(final_json)
     // console.log(final_json);
     return final_json;
-  }
-  finally
-  {
-    await client.close();
-  }
 }
 
 function get_bounty(text)
