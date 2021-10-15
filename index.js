@@ -141,7 +141,9 @@ module.exports = (app, { getRouter }) => {
   // Your code here
   app.log.info("Yay, the app was loaded!");
   const router = getRouter('/leaderboard');
-    router.use(cors())
+  router.use(cors({
+    origin: "*"
+  }))
 
   // add leaderboard
   router.get("/", async (req, res) => {
