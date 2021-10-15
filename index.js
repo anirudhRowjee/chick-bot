@@ -205,8 +205,7 @@ module.exports = (app, { getRouter }) => {
     });
 
     // send it!
-    return context.octokit.issues.createComment(params);
-
+    return context.octokit.issues.createComment(PRComment);
   });
 
 
