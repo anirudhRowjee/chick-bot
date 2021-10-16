@@ -148,7 +148,7 @@ module.exports = (app, { getRouter }) => {
     else
     {
       // no go
-      res.status(404).send("Nice Try :) consider applying to ACM.");
+      res.redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     }
 
 
